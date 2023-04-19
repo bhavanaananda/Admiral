@@ -1,0 +1,13 @@
+dn: olcDatabase={1}hdb,cn=config
+add: olcAccess
+olcAccess: to attrs=userPassword,shadowLastChange,sambaAcctFlags,sambaPwdCanChange,sambaNTPassword,sambaLMPassword,sambaPwdLastSet,sambaPwdMustChange 
+           by dn="cn=admin,%{ADMIRALFULLDN}" write 
+           by anonymous auth 
+           by self write 
+           by * none
+olcAccess: to dn.base="" 
+           by * read
+olcAccess: to * 
+           by dn="cn=admin,%{ADMIRALFULLDN}" write 
+           by * read
+

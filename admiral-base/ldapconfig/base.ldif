@@ -1,0 +1,7 @@
+dn: cn=admin,%{ADMIRALFULLDN}
+objectClass: simpleSecurityObject
+objectClass: organizationalRole
+cn: admin
+userPassword: %{MD5PASS}
+description: LDAP administrator
+
